@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="添加"
+        android:textSize="40dp"
+        android:textColor="@color/red"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="标题"
+            android:textSize="30dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/siteName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="比如网站名或 or AP名"
+            android:textSize="30dp"
+            android:layout_marginLeft="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="账号"
+            android:textSize="30dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/siteId"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="输入账号"
+            android:textSize="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="密码"
+            android:textSize="30dp"
+            android:textColor="@color/black"/>
+        <EditText
+            android:id="@+id/passwd"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="输入你的密码"
+            android:textSize="30dp"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/addCommit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="130dp"
+        android:text="完成"
+        android:textSize="30dp"
+        android:onClick="submit"/>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:textSize="40dp"
+        android:textColor="@color/red"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+
+        />
+    <TextView
+        android:id="@+id/lock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="密码锁屏保护"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/clean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="清除缓存"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"/>
+    <TextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="关于我们"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        />
+    <TextView
+        android:id="@+id/logindel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注销账号"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"/>
+
+
+
+
+</LinearLayout>

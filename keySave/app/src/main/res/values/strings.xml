@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">keySave</string>
+
+    <!--debug value -->
+    <string name="testColor">#16982b</string>
+
+    <!-- content text-->
+    <string name="title">所有密码</string>
+    <string name="add">添加</string>
+
+    <!-- content style -->
+    <string name="titleSize">30dp</string>
+    <string name="contentSize">20dp</string>
+    <string name="name">昵称</string>
+    <string name="geqian">个性签名</string>
+</resources>
