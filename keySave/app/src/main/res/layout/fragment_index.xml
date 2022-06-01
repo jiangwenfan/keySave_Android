@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:padding="5dp">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:lineHeight="60dp"
+            android:textSize="20dp"
+            android:hint="搜索账号密码"
+            android:id="@+id/searchKey"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"/>
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/searchKey"
+            android:textSize="20dp"
+            android:text="添加"/>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/index_listview"/>
+
+    </LinearLayout>
+
+</LinearLayout>

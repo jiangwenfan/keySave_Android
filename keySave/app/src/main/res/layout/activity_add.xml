@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -9,8 +10,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
-        android:text="添加"
-        android:textSize="40dp"
+        android:layout_marginBottom="30dp"
+        android:text="添加密码"
+        android:textSize="50dp"
         android:textColor="@color/red"/>
 
     <LinearLayout
@@ -30,7 +32,7 @@
             android:id="@+id/siteName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="比如网站名或 or AP名"
+            android:hint="待添加的站点名"
             android:textSize="30dp"
             android:layout_marginLeft="20dp"/>
     </LinearLayout>
@@ -52,7 +54,7 @@
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:hint="输入账号"
+            android:hint="输入站点账号"
             android:textSize="30dp"/>
     </LinearLayout>
 
@@ -68,13 +70,15 @@
             android:text="密码"
             android:textSize="30dp"
             android:textColor="@color/black"/>
+
         <EditText
             android:id="@+id/passwd"
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:hint="输入你的密码"
-            android:textSize="30dp"/>
+            android:hint="输入站点密码"
+            android:textSize="30dp"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
     </LinearLayout>
     <Button
         android:id="@+id/addCommit"

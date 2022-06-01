@@ -1,8 +1,12 @@
 package com.example.keysave;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -33,32 +37,43 @@ public class addPasswdActivity extends AppCompatActivity {
         loginid = (EditText) findViewById(R.id.siteId);
         passwd = (EditText) findViewById(R.id.passwd);
         addCommit = (Button) findViewById(R.id.addCommit);
-        Log.d("111","adddd");
-//        addCommit.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //post 方式提交数据到api后端。
-//                sendPost();
-//                Log.d("111","点击了");
-//            }
-//        });
+
+        Log.d("debug-test","1.已经进入到了添加密码的activity页面中..");
+
+
     }
+
+    Handler myHandler = new Handler(Looper.myLooper()){
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 0){
+                //发送添加成功发回状态码。
+                Toast.makeText(getApplicationContext(), "密码添加成功!", Toast.LENGTH_LONG).show();
+            }
+        }
+    };
+    /*
+    * 设置提交密码的事件
+    * */
     public void submit(View v){
-        Log.d("111","点击了");
+        Log.d("debug-test","2.点击了提交密码的按钮...");
         sendPost();
     }
+
     public void sendPost(){
+        Log.d("debug-test","即将开启子线程发送密码到后端..");
         new Thread(new Runnable() {
             @Override
             public void run() {
-                String url = "http://119.29.194.108:6070/api/add";
-                Log.d("222",url);
+                String url = "http://www.pwall.icu:8090/api/add";
+                Log.d("debug-test","添加密码的api："+url);
                 //post发送数据
                 OkHttpClient client = new OkHttpClient();
                 RequestBody requestBody = new FormBody.Builder()
-                        .add("siteName", "google")
-                        .add("sitePasswdEncry", "admin123")
-                        .add("siteId", "zhan210@gmail")
+                        .add("siteName", siteName.getText().toString().trim())
+                        .add("sitePasswd",passwd.getText().toString().trim())
+                        .add("siteId", loginid.getText().toString().trim())
                         .build();
 
                 Request request = new Request.Builder()
@@ -66,20 +81,24 @@ public class addPasswdActivity extends AppCompatActivity {
                         .post(requestBody)
                         .build();
 
-                Response response = null;
                 try {
-                    response = client.newCall(request).execute();
+                    Log.d("debug-test","即将使用post请求发送添加密码动作");
+                    Response response = client.newCall(request).execute();
+                    Log.d("debug-test","请求发送完毕");
                     String responseData = response.body().string();
-                    System.out.println(responseData);
+                    Log.d("debug-test","发送添加密码请求结束,响应info:"+responseData);
 
                 } catch (IOException e) {
                     e.printStackTrace();
+                    Log.d("debug-test","请求报错了...");
                 }
 
-                //发送添加成功发回状态码。
-                Toast.makeText(getApplicationContext(), "add ok!", Toast.LENGTH_LONG);
+
+               Message message = new Message();
+                message.what = 0;
+                myHandler.sendMessage(message);
             }
         }).start();
-        System.out.println("son");
+        Log.d("debug-test","子线程添加密码成功!");
     }
 }

@@ -8,14 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="90sp"
         android:orientation="horizontal"
-        android:background="@color/test">
+       >
+<!--        android:background="@color/test"-->
 
         <ImageView
             android:id="@+id/photo"
             android:layout_width="100sp"
             android:layout_height="90sp"
             android:padding="5sp"
-            android:src="@drawable/ic_launcher_background"/>
+            android:src="@drawable/im17"/>
 
         <LinearLayout
             android:layout_width="290sp"
@@ -48,7 +49,8 @@
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="5dp"
         android:layout_marginTop="10dp"
-        android:background="@color/test"/>
+        />
+<!--    android:background="@color/test"-->
     <TextView
         android:id="@+id/input"
         android:layout_width="wrap_content"
@@ -71,21 +73,20 @@
         android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/test"
         android:text="退出登录"
         android:textColor="@color/black"
         android:textSize="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="5dp"/>
-    <Button
-        android:id="@+id/edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="编辑资料"/>
-<!--    ttttttttest =-->
-    <Button
-        android:id="@+id/setting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="设置"/>
+<!--    <Button-->
+<!--        android:id="@+id/edit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="编辑资料"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/setting"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="设置"/>-->
 </LinearLayout>
